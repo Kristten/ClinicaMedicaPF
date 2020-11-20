@@ -12,11 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="455.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.LoginController">
+<AnchorPane prefHeight="441.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.LoginController">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox prefHeight="441.0" prefWidth="578.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Pane prefHeight="455.0" prefWidth="321.0" style="-fx-background-color: #303645;">
+            <Pane prefHeight="441.0" prefWidth="395.0" style="-fx-background-color: #303645;">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="85.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -30,9 +30,9 @@
                   </Text>
                </children>
             </Pane>
-            <Pane prefHeight="455.0" prefWidth="381.0">
+            <Pane prefHeight="441.0" prefWidth="379.0">
                <children>
-                  <Label layoutX="143.0" layoutY="75.0" text="LOGIN">
+                  <Label layoutX="83.0" layoutY="75.0" text="LOGIN">
                      <font>
                         <Font size="32.0" />
                      </font>
@@ -47,9 +47,9 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button layoutX="99.0" layoutY="348.0" mnemonicParsing="false" onAction="#entrar" prefHeight="25.0" prefWidth="181.0" style="-fx-background-color: #326BFF;" text="Entrar" textFill="WHITE" />
-                  <TextField fx:id="txtUsuario" layoutX="56.0" layoutY="191.0" prefHeight="25.0" prefWidth="270.0" />
-                  <PasswordField fx:id="txtSenha" layoutX="56.0" layoutY="269.0" prefHeight="25.0" prefWidth="270.0" />
+                  <Button layoutX="55.0" layoutY="347.0" mnemonicParsing="false" onAction="#entrar" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #326BFF;" text="Entrar" textFill="WHITE" />
+                  <TextField fx:id="txtUsuario" layoutX="56.0" layoutY="191.0" />
+                  <PasswordField fx:id="txtSenha" layoutX="56.0" layoutY="269.0" prefHeight="25.0" />
                </children>
             </Pane>
          </children>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="434.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ClinicaController">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.MedicoController">
    <children>
       <HBox prefHeight="61.0" prefWidth="730.0" style="-fx-background-color: #1E90FF;">
          <children>
@@ -23,18 +23,18 @@
             </Label>
          </children>
       </HBox>
-      <HBox layoutY="67.0" prefHeight="365.0" prefWidth="730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+      <HBox layoutY="67.0" prefHeight="365.0" prefWidth="730.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Pane prefHeight="319.0" prefWidth="144.0">
                <children>
-                  <Button layoutX="13.0" layoutY="56.0" mnemonicParsing="false" onAction="#abreCadMedico" prefHeight="25.0" prefWidth="119.0" text="Cadastrar Médico" />
+                  <Button layoutX="13.0" layoutY="56.0" mnemonicParsing="false" onAction="#abreCadMedico" prefHeight="25.0" prefWidth="119.0" text="Cadastrar Paciente" />
                   <Button layoutX="12.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Plano de Saúde" />
                   <Button layoutX="13.0" layoutY="129.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Relatórios" />
                   <Button layoutX="12.0" layoutY="171.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Agenda" />
                   <Button layoutX="12.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Agendar consulta" />
                </children>
             </Pane>
-            <TabPane fx:id="tabPane" prefHeight="367.0" prefWidth="589.0" tabClosingPolicy="ALL_TABS" />
+            <TabPane fx:id="tabPane" tabClosingPolicy="ALL_TABS" />
          </children>
       </HBox>
    </children>
