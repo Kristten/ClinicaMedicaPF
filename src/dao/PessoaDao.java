@@ -12,7 +12,7 @@ public class PessoaDao {
 	public static void novaPessoa(Pessoa p) {
 		Connection c = Conexao.conn();
 		try {
-			String sql = "insert into pessoa (nome, sexo, nascimento, bairro, cidade, cpf, estado, endereco1, cep, ativo ) values (?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into pessoa (nome, sexo, nascimento, bairro, cidade, cpf, estado, endereco1, cep, ativo, tipo ) values (?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, p.getNome());
 			ps.setString(2, p.getSexo());
@@ -24,6 +24,7 @@ public class PessoaDao {
 			ps.setString(8, p.getEndereco1());
 			ps.setString(9, p.getCep());
 			ps.setString(10, p.isAtiva()?"S":"N");
+			ps.setString(11, p.getTipo());
 			ps.executeUpdate();
 			c.close();
 		} catch (Exception e) {
@@ -46,7 +47,7 @@ public class PessoaDao {
 			ps.setString(8, p.getEndereco1());
 			ps.setString(9, p.getCep());
 			ps.setString(10, p.isAtiva()?"S":"N");
-			ps.setInt(8, p.getId());
+			ps.setInt(11, p.getId());
 			ps.executeUpdate();
 			c.close();
 		} catch (Exception e) {

@@ -11,8 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class LoginController {
@@ -25,15 +25,27 @@ public class LoginController {
     
     public void entrar(ActionEvent event) throws IOException {
     	if(txtUsuario.getText().equalsIgnoreCase("admin") && txtSenha.getText().equalsIgnoreCase("admin")) {
-    	AnchorPane voltar = (AnchorPane)FXMLLoader.load(getClass().getResource("InicialMedico.fxml"));
+    	BorderPane voltar = (BorderPane)FXMLLoader.load(getClass().getResource("InicialMedico.fxml"));
 		Scene scene = new Scene(voltar);
 		Stage window = (Stage)(((Node) event.getSource()).getScene().getWindow());
 		window.setScene(scene);
+		window.setMaximized(true);
 		window.show();
+		
     	}
-    	else {
-    		JOptionPane.showMessageDialog(null, "Senha ou usuário ínvalidos!");
-    	}
+    	
+    	else if(txtUsuario.getText().equalsIgnoreCase("secretaria") && txtSenha.getText().equalsIgnoreCase("secretaria")) {
+        	BorderPane voltar = (BorderPane)FXMLLoader.load(getClass().getResource("InicialSecretaria.fxml"));
+    		Scene scene = new Scene(voltar);
+    		Stage window = (Stage)(((Node) event.getSource()).getScene().getWindow());
+    		window.setScene(scene);
+    		window.setMaximized(true);
+    		window.show();
+    		
+        	}
+        	else {
+        		JOptionPane.showMessageDialog(null, "Senha ou usuário ínvalidos!");
+        	}
     }
 
 
