@@ -7,13 +7,14 @@ import java.util.ArrayList;
 
 import dao.AgendaDao;
 
-
 import domain.Agendamento;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import util.Mensagens;
 
 public class AgendaController {
 	@FXML TableView<Agendamento> tbl;
@@ -48,6 +49,14 @@ public class AgendaController {
 		ArrayList<Agendamento> lista = AgendaDao.buscaAgendamento(dataFormatada);
 		tbl.setItems(FXCollections.observableArrayList(lista));
 	}
+    @FXML
+    public void excluiAgendamento() {
+ 	   if(Mensagens.msgOkCancel("Exclusão", "Confirma Exclusão?")==ButtonType.OK) {
+			Agendamento a = tbl.getSelectionModel().getSelectedItem();
+			AgendaDao.excluiAgendamento(a);
+			
+		}
+    }
 	
 	
 

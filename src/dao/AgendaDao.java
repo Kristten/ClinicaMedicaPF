@@ -34,5 +34,17 @@ public class AgendaDao {
 		}
 		return lista;
 	}
+	public static void excluiAgendamento(Agendamento a) {
+		Connection c = Conexao.conn();
+		try {
+			String sql = "delete from consultas where id=?";
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setInt(1,a.getId());
+			ps.executeUpdate();
+			c.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }

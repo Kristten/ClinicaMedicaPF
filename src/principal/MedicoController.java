@@ -19,6 +19,14 @@ public class MedicoController {
 	public void abreCadMedico() {
 		abreTab("Pacientes", "CadPaciente.fxml");
 	}
+	@FXML
+	public void abreAgenda() {
+		abreTab("Agenda", "Agenda.fxml");
+	}
+	@FXML
+	public void abreProntuario() {
+		abreTab("Prontuario", "Prontuario.fxml");
+	}
 	@FXML 
 	private void voltar(ActionEvent event) throws IOException {
     	
